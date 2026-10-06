@@ -3,9 +3,7 @@ import streamlit as st
 from analyzer import analyze_code
 
 
-# --------------------------------
-# Page configuration
-# --------------------------------
+
 
 st.set_page_config(
     page_title="Code Complexity Analyzer",
@@ -14,9 +12,7 @@ st.set_page_config(
 )
 
 
-# --------------------------------
-# Header
-# --------------------------------
+
 
 st.title("🐛 Code Complexity Analyzer")
 
@@ -26,9 +22,7 @@ st.write(
 )
 
 
-# --------------------------------
-# Language selection
-# --------------------------------
+
 
 language = st.selectbox(
     "Select Programming Language",
@@ -36,9 +30,7 @@ language = st.selectbox(
 )
 
 
-# --------------------------------
-# Code input
-# --------------------------------
+
 
 code = st.text_area(
     "Paste your code here:",
@@ -47,9 +39,7 @@ code = st.text_area(
 )
 
 
-# --------------------------------
-# Analyze button
-# --------------------------------
+
 
 if st.button("🔍 Analyze Code", use_container_width=True):
 
@@ -63,9 +53,7 @@ if st.button("🔍 Analyze Code", use_container_width=True):
         st.success("Code analysis completed!")
 
 
-        # --------------------------------
-        # Main metrics
-        # --------------------------------
+  
 
         st.subheader("📊 Code Overview")
 
@@ -96,9 +84,7 @@ if st.button("🔍 Analyze Code", use_container_width=True):
             )
 
 
-        # --------------------------------
-        # Complexity
-        # --------------------------------
+     
 
         st.subheader("⚡ Complexity Analysis")
 
@@ -121,9 +107,6 @@ if st.button("🔍 Analyze Code", use_container_width=True):
             )
 
 
-        # --------------------------------
-        # Nested loops
-        # --------------------------------
 
         st.subheader("🔄 Loop Analysis")
 
@@ -132,9 +115,6 @@ if st.button("🔍 Analyze Code", use_container_width=True):
         )
 
 
-        # --------------------------------
-        # Explanation
-        # --------------------------------
 
         st.subheader("💡 Explanation")
 
@@ -143,9 +123,7 @@ if st.button("🔍 Analyze Code", use_container_width=True):
         )
 
 
-        # --------------------------------
-        # Code quality
-        # --------------------------------
+
 
         st.subheader("⭐ Code Quality")
 
@@ -158,9 +136,7 @@ if st.button("🔍 Analyze Code", use_container_width=True):
         )
 
 
-        # --------------------------------
-        # Additional information
-        # --------------------------------
+
 
         st.subheader("📋 Additional Statistics")
 
